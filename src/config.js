@@ -19,5 +19,4 @@
 export const API_URL =
   import.meta.env.VITE_API_URL || "https://back-nu-sand.vercel.app";
 
-// Chave usada para guardar o token no localStorage do navegador.
 export const CHAVE_SESSAO = "sessao-3c";
