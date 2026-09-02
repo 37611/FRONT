@@ -17,6 +17,6 @@
 //    has been blocked by CORS policy
 //
 export const API_URL =
-  import.meta.env.VITE_API_URL || "https://back-nu-sand.vercel.app";
+  import.meta.env.VITE_API_URL || "https://back-novo.vercel.app";
 
 export const CHAVE_SESSAO = "sessao-3c";
