@@ -192,10 +192,20 @@ export async function listarUsuarios(token) {
 //  🤔 Pergunta pra pensar: por que o card do mural mudou, se você só mexeu
 //     no formulário? (Resposta: o componente pai recarregou a lista.)
 //
-export async function editarPerfil(token, nome, email) {
-  // ↓↓↓ APAGUE ESTA LINHA E ESCREVA SEU CÓDIGO ↓↓↓
-  throw new Error("🚧 TAREFA 3 ainda não foi implementada (src/services/api.js)");
+export async function listarUsuarios(token) {
+  const resposta = await fetch(`${API_URL}/api/usuarios`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  const dados = await resposta.json();
+
+  if (!resposta.ok) {
+    throw new Error(dados.mensagem || "Não foi possível carregar a lista.");
+  }
+
+  return dados.usuarios;
 }
+
 
 // ╔═════════════════════════════════════════════════════════════════════╗
 // ║                                                                     ║
